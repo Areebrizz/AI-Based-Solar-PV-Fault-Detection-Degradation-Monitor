@@ -1,0 +1,7 @@
+streamlit        # Web framework
+pandas           # Data manipulation
+numpy          # Numerical computing
+plotly         # Interactive plots
+scikit-learn    # Machine learning
+matplotlib       # Static plots
+seaborn        # Statistical visualization
