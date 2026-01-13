@@ -496,11 +496,76 @@ def main():
             uploaded_file = st.file_uploader("Upload PV data CSV", 
                                             type=['csv'])
         
-        st.markdown("---")
-        st.markdown("### Credits")
-        st.markdown("**Made by Areeb Rizwan**")
-        st.markdown("[www.areebrizwan.com](http://www.areebrizwan.com)")
-        st.markdown("[LinkedIn Profile](https://www.linkedin.com/in/areebrizwan)")
+# Replace the current credits section (lines 428-432) with this:
+
+st.markdown("---")
+st.markdown("### 🏆 Developed By")
+
+# Create a professional profile card
+col1, col2 = st.columns([1, 3])
+with col1:
+    st.image("https://img.icons8.com/color/96/000000/user-male-circle--v1.png", 
+             width=80)
+with col2:
+    st.markdown("**Areeb Rizwan**")
+    st.markdown("⚡ Renewable Energy Data Scientist")
+    st.markdown("📍 AI & ML Solutions for Clean Energy")
+
+st.markdown("---")
+
+# Links with icons
+st.markdown("### 🌐 Connect With Me")
+st.markdown("""
+<div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 20px; border-radius: 10px; color: white;">
+    <div style="display: flex; justify-content: space-between; align-items: center;">
+        <div>
+            <div style="font-size: 18px; font-weight: bold;">📍 Portfolio</div>
+            <div style="font-size: 14px;">www.areebrizwan.com</div>
+        </div>
+        <a href="http://www.areebrizwan.com" target="_blank" style="color: white; text-decoration: none;">
+            <div style="background: rgba(255,255,255,0.2); padding: 8px 15px; border-radius: 5px; font-size: 14px;">
+                Visit →
+            </div>
+        </a>
+    </div>
+</div>
+""", unsafe_allow_html=True)
+
+st.markdown("")  # Spacer
+
+st.markdown("""
+<div style="background: linear-gradient(135deg, #0077b5 0%, #00a0dc 100%); padding: 20px; border-radius: 10px; color: white;">
+    <div style="display: flex; justify-content: space-between; align-items: center;">
+        <div>
+            <div style="font-size: 18px; font-weight: bold;">💼 LinkedIn</div>
+            <div style="font-size: 14px;">Professional Profile</div>
+        </div>
+        <a href="https://www.linkedin.com/in/areebrizwan" target="_blank" style="color: white; text-decoration: none;">
+            <div style="background: rgba(255,255,255,0.2); padding: 8px 15px; border-radius: 5px; font-size: 14px;">
+                Connect →
+            </div>
+        </a>
+    </div>
+</div>
+""", unsafe_allow_html=True)
+
+# Optional: Add GitHub if you have
+st.markdown("")  # Spacer
+st.markdown("""
+<div style="background: linear-gradient(135deg, #333 0%, #666 100%); padding: 20px; border-radius: 10px; color: white;">
+    <div style="display: flex; justify-content: space-between; align-items: center;">
+        <div>
+            <div style="font-size: 18px; font-weight: bold;">💻 GitHub</div>
+            <div style="font-size: 14px;">Open Source Projects</div>
+        </div>
+        <a href="https://github.com/areebrizwan" target="_blank" style="color: white; text-decoration: none;">
+            <div style="background: rgba(255,255,255,0.2); padding: 8px 15px; border-radius: 5px; font-size: 14px;">
+                Follow →
+            </div>
+        </a>
+    </div>
+</div>
+""", unsafe_allow_html=True)
     
     # Initialize analyzer
     analyzer = SolarPVAnalyzer()
